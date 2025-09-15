@@ -149,7 +149,7 @@ export const useCartStore = create<CartState>()(
       closeCheckout: () => set({ isCheckoutOpen: false }),
       
       // Checkout process
-      checkout: async (data: CheckoutData) => {
+      checkout: async () => {
         const { items } = get()
         
         if (items.length === 0) {

@@ -46,7 +46,7 @@ export function LoginForm(props: React.ComponentPropsWithoutRef<"div">) {
     try {
       await login(data.email, data.password)
       reset()
-    } catch (error) {
+    } catch {
       // Error handling is done in the auth store
     }
   }
@@ -54,7 +54,7 @@ export function LoginForm(props: React.ComponentPropsWithoutRef<"div">) {
   const handleGoogleLogin = async () => {
     try {
       await googleLogin()
-    } catch (error) {
+    } catch {
       // Error handling is done in the auth store
     }
   }

@@ -1,12 +1,11 @@
 "use client"
 import React, { useEffect } from "react"
 import { useRouter } from "next/navigation"
-import { GalleryVerticalEnd } from "lucide-react"
 import { LoginForm } from "@/components/login-form"
 import { useAuthStore } from "@/lib/auth-store"
 
 export default function LoginPage() {
-  const { token, checkToken, logout } = useAuthStore()
+  const { token, checkToken } = useAuthStore()
   const router = useRouter()
 
   useEffect(() => {

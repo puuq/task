@@ -1,5 +1,7 @@
 "use client"
 import React, { useEffect } from "react"
+import Link from "next/link"
+import Image from "next/image"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
@@ -23,7 +25,6 @@ import {
 import { useProductsStore } from "@/lib/products-store"
 import { TableSkeleton } from "@/components/table-skeleton"
 import { Trash2 } from "lucide-react"
-import Link from "next/link"
 
 export default function ProductsTable() {
   const { 
@@ -128,9 +129,11 @@ export default function ProductsTable() {
                       className="flex items-center gap-3 hover:bg-muted/50 rounded-md p-2 -m-2 transition-colors"
                     >
                       <div className="w-12 h-12 bg-white rounded border overflow-hidden flex-shrink-0">
-                        <img
+                        <Image
                           src={product.image}
                           alt={product.title}
+                          width={48}
+                          height={48}
                           className="w-full h-full object-contain"
                         />
                       </div>

@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Minus, Plus, ShoppingCart, Trash2, X } from "lucide-react"
+import { Minus, Plus, ShoppingCart, Trash2 } from "lucide-react"
 import { useCartStore } from "@/lib/cart-store"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -11,7 +11,6 @@ import {
   SheetContent, 
   SheetHeader, 
   SheetTitle,
-  SheetTrigger,
   SheetDescription
 } from "@/components/ui/sheet"
 import {
@@ -78,7 +77,7 @@ export function CartModal() {
         expiryDate: "",
         cvv: ""
       })
-    } catch (error) {
+    } catch {
       // Error is handled in the store
     } finally {
       setIsSubmitting(false)

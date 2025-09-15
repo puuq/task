@@ -91,7 +91,7 @@ export default function ProductDetailPage() {
           text: product?.description,
           url: window.location.href,
         })
-      } catch (err) {
+      } catch {
         // User cancelled sharing
       }
     } else {

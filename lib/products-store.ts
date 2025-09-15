@@ -288,7 +288,7 @@ export const useProductsStore = create<ProductsState>((set, get) => ({
     
     try {
       // Make the API call
-      await productsApi.delete(id)
+      await productsApi.delete()
       
       // Success: dismiss loading toast and show success
       toast.dismiss(loadingToast)

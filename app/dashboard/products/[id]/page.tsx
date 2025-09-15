@@ -1,4 +1,5 @@
 "use client"
+import Image from "next/image"
 import { AppSidebar } from "@/components/app-sidebar"
 import { Separator } from "@/components/ui/separator"
 import { Button } from "@/components/ui/button"
@@ -207,9 +208,11 @@ export default function ProductEditPage({ params }: { params: { id: string } }) 
                 <Label htmlFor="image">Product Image</Label>
                 <div className="mt-2 space-y-4">
                   <div className="aspect-square bg-white rounded-lg border overflow-hidden">
-                    <img
+                    <Image
                       src={formData.image}
                       alt={formData.title}
+                      width={400}
+                      height={400}
                       className="w-full h-full object-contain p-4"
                     />
                   </div>

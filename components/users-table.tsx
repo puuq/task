@@ -19,7 +19,6 @@ export default function UsersTable() {
     filteredUsers, 
     loading, 
     error, 
-    filters,
     fetchUsers
   } = useUsersStore()
 

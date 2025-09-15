@@ -1,10 +1,10 @@
 "use client"
 
 import React, { useState } from "react"
+import Image from "next/image"
 import { z } from "zod"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { toast } from "sonner"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -18,7 +18,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog"
-import { Loader2, Upload, X } from "lucide-react"
+import { Loader2, Upload } from "lucide-react"
 import { useProductsStore } from "@/lib/products-store"
 
 // Form validation schema
@@ -156,9 +156,11 @@ export function AddProductModal({ open, onOpenChange }: AddProductModalProps) {
                   {/* Image Preview */}
                   <div className="aspect-square bg-muted rounded-lg border overflow-hidden">
                     {imagePreview ? (
-                      <img
+                      <Image
                         src={imagePreview}
                         alt="Product preview"
+                        width={400}
+                        height={400}
                         className="w-full h-full object-contain p-4"
                         onLoad={handleImageLoad}
                         onError={handleImageError}

@@ -1,7 +1,6 @@
 "use client"
 import React, { useEffect } from "react"
 import { useRouter } from "next/navigation"
-import { GalleryVerticalEnd } from "lucide-react"
 import { SignupForm } from "@/components/signup-form"
 import { useAuthStore } from "@/lib/auth-store"
 

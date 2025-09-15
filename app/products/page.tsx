@@ -3,7 +3,7 @@
 import { useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { Star, ShoppingCart, Filter, Grid, List } from "lucide-react"
+import { Star, ShoppingCart, Filter } from "lucide-react"
 import { useProductsStore } from "@/lib/products-store"
 import { useCartStore } from "@/lib/cart-store"
 import { Button } from "@/components/ui/button"
@@ -296,7 +296,7 @@ interface FiltersContentProps {
   resetFilters: () => void
 }
 
-function FiltersContent({ categories, filters, setCategory, setPriceRange, resetFilters }: FiltersContentProps) {
+function FiltersContent({ categories, filters, setCategory, setPriceRange }: FiltersContentProps) {
   return (
     <div className="space-y-6">
       {/* Category Filter */}

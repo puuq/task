@@ -46,7 +46,7 @@ export const productsApi = {
       const response = await fetch("https://fakestoreapi.com/products")
       if (!response.ok) throw new Error("Failed to fetch products")
       return response.json()
-    } catch (error) {
+    } catch {
       throw new Error("Failed to fetch products")
     }
   },
@@ -57,7 +57,7 @@ export const productsApi = {
       const response = await fetch(`https://fakestoreapi.com/products/${id}`)
       if (!response.ok) throw new Error("Product not found")
       return response.json()
-    } catch (error) {
+    } catch {
       throw new Error("Failed to fetch product")
     }
   },
@@ -68,7 +68,7 @@ export const productsApi = {
       const response = await fetch("https://fakestoreapi.com/products/categories")
       if (!response.ok) throw new Error("Failed to fetch categories")
       return response.json()
-    } catch (error) {
+    } catch {
       throw new Error("Failed to fetch categories")
     }
   },
@@ -117,7 +117,7 @@ export const productsApi = {
     }
   },
 
-  async delete(id: number): Promise<void> {
+  async delete(): Promise<void> {
     try {
       await delay(800)
       
@@ -142,7 +142,7 @@ export const usersApi = {
       const response = await fetch("https://fakestoreapi.com/users")
       if (!response.ok) throw new Error("Failed to fetch users")
       return response.json()
-    } catch (error) {
+    } catch {
       throw new Error("Failed to fetch users")
     }
   },
@@ -153,7 +153,7 @@ export const usersApi = {
       const response = await fetch(`https://fakestoreapi.com/users/${id}`)
       if (!response.ok) throw new Error("User not found")
       return response.json()
-    } catch (error) {
+    } catch {
       throw new Error("Failed to fetch user")
     }
   },
@@ -186,12 +186,12 @@ export const usersApi = {
       const updatedUser = { ...currentUser, ...user }
 
       return updatedUser
-    } catch (error) {
-      throw error instanceof Error ? error : new Error("Failed to update user")
+    } catch {
+      throw new Error("Failed to update user")
     }
   },
 
-  async delete(id: number): Promise<void> {
+  async delete(): Promise<void> {
     try {
       await delay(600)
       

@@ -26,8 +26,7 @@ export function SignupForm(props: React.ComponentPropsWithoutRef<"div">) {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
-    reset,
-    watch
+    reset
   } = useForm<SignupFormData>({
     resolver: zodResolver(signupSchema)
   })
@@ -52,7 +51,7 @@ export function SignupForm(props: React.ComponentPropsWithoutRef<"div">) {
         lastName: data.lastName
       })
       reset()
-    } catch (error) {
+    } catch {
       // Error handling is done in the auth store
     }
   }
@@ -60,7 +59,7 @@ export function SignupForm(props: React.ComponentPropsWithoutRef<"div">) {
   const handleGoogleSignup = async () => {
     try {
       await googleLogin()
-    } catch (error) {
+    } catch {
       // Error handling is done in the auth store
     }
   }
