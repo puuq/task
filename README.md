@@ -24,8 +24,8 @@ The application simulates a real e-commerce platform using the [Fake Store API](
 
 1. **Clone and install dependencies:**
    ```bash
-   git clone <repository-url>
-   cd <project-folder>
+   git clone https://github.com/puuq/task
+   cd task
    bun install
    ```
 
