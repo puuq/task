@@ -250,5 +250,6 @@ The application is built with customization in mind:
 - All authentication is for demo purposes only
 - Checkout process is simulated and doesn't process real payments
 - External images are loaded from Fake Store API
+- This is designed for admin side not for user side
 
 This project serves as an excellent foundation for building production e-commerce applications with modern web technologies and best practices.
