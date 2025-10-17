@@ -90,7 +90,7 @@ export default function HomePage() {
               </div>
               <h3 className="text-xl font-semibold mb-2">Fast Shipping</h3>
               <p className="text-muted-foreground">
-                Free shipping on orders over $50. Get your products delivered in 2-3 business days.
+                Free shipping on orders over $100. Get your products delivered in 2-3 business days.
               </p>
             </div>
             <div className="text-center">
